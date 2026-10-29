@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#11121d">
+<meta name="description" content="THE #1 POKER ROOM">
+<title>THE #1 POKER ROOM</title>
+<style>
+:root{color-scheme:dark;--bg:#11121d;--panel:#191a29;--text:#f6f2e9;--muted:#b8bacb;--accent:#c6f36a;--accent2:#8ca8ff;--line:rgba(218,222,255,.18)}
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--bg)}
+body{margin:0;min-height:100vh;min-height:100svh;color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse at 78% 12%,rgba(140,168,255,.15),transparent 38%),radial-gradient(ellipse at 12% 92%,rgba(198,243,106,.08),transparent 40%),var(--bg)}
+.page{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:clamp(16px,5vw,64px)}
+.hero{position:relative;isolation:isolate;overflow:hidden;width:min(100%,1120px);min-height:min(720px,82vh);min-height:min(720px,82svh);display:grid;grid-template-columns:1.05fr .95fr;border:1px solid var(--line);border-radius:28px;background:linear-gradient(130deg,rgba(31,33,51,.96),rgba(18,19,31,.98));box-shadow:0 32px 100px rgba(0,0,0,.25)}
+.copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(32px,6vw,78px)}
+.eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 29px;color:#d2d4e3;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--accent)}
+h1{margin:0;max-width:650px;font-size:clamp(58px,7.2vw,100px);font-weight:850;line-height:.88;letter-spacing:-.075em}
+h1 span{display:block}
+h1 .number{color:var(--accent)}
+h1 .second{margin-top:12px;color:var(--text)}
+.rule{width:76px;height:4px;margin:34px 0 27px;background:var(--accent);border-radius:5px}
+.features{display:grid;gap:16px;margin:0;padding:0;list-style:none;color:var(--muted);font-size:15px;line-height:1.45}
+.features li{display:flex;align-items:center;gap:12px}
+.dot{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:var(--accent)}
+.cta{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;min-width:218px;min-height:60px;margin-top:39px;padding:0 22px;background:var(--accent);border:1px solid rgba(255,255,255,.18);border-radius:5px;color:#161a20;text-decoration:none;font-size:13px;font-weight:900;letter-spacing:.12em;transition:transform .16s ease,background .16s ease}
+.cta:hover{transform:translateY(-2px);background:#d6ff83}
+.cta:focus-visible{outline:3px solid white;outline-offset:4px}
+.cta svg{width:19px;height:19px;flex:none}
+.visual{position:relative;min-height:100%;overflow:hidden;background:radial-gradient(ellipse at 52% 48%,rgba(140,168,255,.18),transparent 44%),linear-gradient(145deg,#22243a,#11121d 75%)}
+.visual:before{content:"";position:absolute;width:74%;aspect-ratio:1;left:14%;top:15%;border:1px solid rgba(198,243,106,.23);border-radius:50%;box-shadow:0 0 0 28px rgba(198,243,106,.025),0 0 0 70px rgba(140,168,255,.035)}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(198,243,106,.055) 35.2%,transparent 35.8%),linear-gradient(35deg,transparent 62%,rgba(140,168,255,.08) 62.2%,transparent 62.8%);pointer-events:none}
+.orb{position:absolute;left:50%;top:47%;width:min(38vw,310px);aspect-ratio:1;transform:translate(-50%,-50%) rotate(-12deg);border-radius:50%;background:radial-gradient(circle at 34% 27%,#414b6b 0,#252a42 36%,#171a2b 69%,#0f111d 100%);border:1px solid rgba(225,230,255,.3);box-shadow:inset -22px -26px 48px rgba(0,0,0,.45),inset 10px 12px 24px rgba(255,255,255,.07),0 40px 90px rgba(0,0,0,.45)}
+.orb:before{content:"";position:absolute;inset:11%;border:1px solid rgba(198,243,106,.56);border-radius:50%}
+.orb:after{content:"#1";position:absolute;inset:0;display:grid;place-items:center;color:var(--accent);font-size:clamp(70px,9vw,124px);font-weight:900;letter-spacing:-.09em;text-shadow:0 4px 30px rgba(198,243,106,.13)}
+.visual-label{position:absolute;left:12%;bottom:9%;z-index:1;color:#aeb3cb;font-size:10px;letter-spacing:.22em;font-weight:800}
+.visual-label:after{content:"";display:block;width:48px;height:2px;margin-top:14px;background:var(--accent2)}
+@media(max-width:720px){
+ .page{padding:12px}
+ .hero{grid-template-columns:1fr;min-height:calc(100svh - 24px);min-height:calc(100vh - 24px);border-radius:20px}
+ .copy{padding:clamp(28px,7vw,42px) clamp(23px,7vw,36px) 24px}
+ .eyebrow{margin-bottom:24px;font-size:10px}
+ h1{font-size:clamp(57px,13.5vw,82px);line-height:.91}
+ h1 .second{margin-top:8px}
+ .rule{margin:26px 0 22px;width:60px;height:3px}
+ .features{gap:12px;font-size:14px}
+ .cta{width:100%;min-height:58px;margin-top:29px}
+ .visual{min-height:210px;height:28vh;height:28svh;max-height:290px}
+ .visual:before{width:50%;left:50%;top:6%}
+ .orb{width:min(42vw,190px);top:45%}
+ .orb:after{font-size:clamp(66px,18vw,94px)}
+ .visual-label{left:7%;bottom:12%;font-size:9px}
+}
+@media(max-width:360px){h1{font-size:52px}.features{font-size:13px}.visual{min-height:175px}}
+@media(prefers-reduced-motion:reduce){.cta{transition:none}}
+</style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1399310622039113');fbq('track','PageView');
+</script>
+</head>
+<body>
+<div class="page">
+<main class="hero">
+<section class="copy">
+<p class="eyebrow">ONLINE POKER</p>
+<h1><span class="number">THE #1</span><span class="second">POKER ROOM</span></h1>
+<div class="rule" aria-hidden="true"></div>
+<ul class="features">
+<li><span class="dot" aria-hidden="true"></span><span>Multiple Game Formats</span></li>
+<li><span class="dot" aria-hidden="true"></span><span>Premium Mobile Experience</span></li>
+<li><span class="dot" aria-hidden="true"></span><span>Play on Your Schedule</span></li>
+</ul>
+<a class="cta" id="telegram-cta" href="https://t.me/+ljntX0QEVqM4ZDEy" target="_blank" rel="noopener noreferrer"><span>PLAY NOW</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</section>
+<div class="visual" aria-hidden="true"><div class="orb"></div><div class="visual-label">PRECISION · STRATEGY · PLAY</div></div>
+</main>
+</div>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1399310622039113&ev=PageView&noscript=1" alt=""></noscript>
+<script>document.getElementById('telegram-cta').addEventListener('click',function(){if(typeof window.fbq==='function'){window.fbq('trackCustom','TelegramCTA',{destination:'telegram'});}});</script>
+</body>
+</html>
